@@ -13,10 +13,6 @@ public class Fabricante {
         this.pais = pais;
     }
 
-    public Fabricante() {
-
-    }
-
     public static Fabricante fabricaMayorVentas(){
         Fabricante iterator=listaFabricantes.get(0);
 

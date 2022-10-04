@@ -1,27 +1,24 @@
 package vehiculos;
 
-import java.util.ArrayList;
-
 public class Pais {
-    public static String nombre;
-
+    private String nombre;
 
     public Pais(String nombre){
-        Pais.nombre=nombre;
+        this.nombre=nombre;
     }
 
-    public static String getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public static void setNombre(String nombre) {
-        Pais.nombre = nombre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public static String paisMasVendedor(){
+    public static Pais paisMasVendedor(){
 
-        Fabricante fabricanteMayorVentas = new Fabricante();
-        return fabricanteMayorVentas.getNombre();
+        Fabricante fabricanteMayorVentas = Fabricante.fabricaMayorVentas();
+        return fabricanteMayorVentas.getPais();
 
     }
 
