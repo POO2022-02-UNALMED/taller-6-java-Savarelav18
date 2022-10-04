@@ -17,11 +17,19 @@ public class Fabricante {
         Fabricante iterator=listaFabricantes.get(0);
 
         for(Fabricante i : listaFabricantes)
-                if(i.count>iterator.count){
+                if(i.getCount()>iterator.getCount()){
                     iterator=i;
                 }
 
         return iterator;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 
     public String getNombre() {
