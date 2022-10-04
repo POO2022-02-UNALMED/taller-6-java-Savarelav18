@@ -10,10 +10,12 @@ public class Automovil extends Vehiculo{
         cantidadAutomovil++;
     }
 
-    public static Automovil crearAutomovil(String placa,String nombre,int precio,int peso,Fabricante fabricante,int puestos){
-        return new Automovil(placa,4,100,nombre,precio,peso,"FWD",fabricante,puestos);
+    public Automovil(String placa,String nombre,int precio, int peso,Fabricante fabricante,int puestos){
+        super(placa,4,100,nombre,precio,peso,"FWD",fabricante);
+        this.puestos=puestos;
+        cantidadAutomovil++;
     }
-
+    
     public int getPuestos() {
         return puestos;
     }
