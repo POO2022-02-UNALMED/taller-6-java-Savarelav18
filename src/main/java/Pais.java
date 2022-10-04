@@ -3,27 +3,28 @@ package vehiculos;
 import java.util.ArrayList;
 
 public class Pais {
-    String nombre;
+    private static String nombre;
     static ArrayList<String> listaPaises = new ArrayList<String>();
     static ArrayList<Integer> repeticion = new ArrayList<Integer>();
-    int count=0;
-    int indexList=0;
+    static int count=0;
+    static int indexList=0;
 
     public Pais(String nombre){
-        this.nombre=nombre;
+        Pais.nombre=nombre;
         listaPaises.add(nombre);
 
     }
 
-    public String getNombre() {
+    public static String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public static void setNombre(String nombre) {
+        Pais.nombre = nombre;
     }
 
-    public String paisMasVendedor(){
+    public static String paisMasVendedor(){
+
         int iterator=repeticion.get(0);
 
         for(String i : listaPaises)
@@ -42,4 +43,5 @@ public class Pais {
             }
         return listaPaises.get(indexList);
     }
+
 }
