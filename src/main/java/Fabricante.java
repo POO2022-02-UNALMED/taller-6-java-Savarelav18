@@ -6,30 +6,23 @@ public class Fabricante {
     String nombre;
     Pais pais;
     private static ArrayList<Fabricante> listaFabricantes = new ArrayList<>();
-    private int count=0;
+    private int count;
 
     public Fabricante(String nombre, Pais pais) {
         this.nombre = nombre;
         this.pais = pais;
+        listaFabricantes.add(this);
     }
 
     public static Fabricante fabricaMayorVentas(){
         Fabricante iterator=listaFabricantes.get(0);
 
         for(Fabricante i : listaFabricantes)
-                if(i.getCount()>iterator.getCount()){
+                if(i.count>iterator.count){
                     iterator=i;
                 }
 
         return iterator;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 
     public String getNombre() {
